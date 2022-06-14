@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MDAdrq3Ir99iERJrBNMbyZyhDW/9osl+tb7HqTEatB0kUJeh31VxX7HfA51SoLaDES3ny6V3lyc8GjArUbOP7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lenovo\\RiderProjects\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
