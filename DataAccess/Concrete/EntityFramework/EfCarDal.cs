@@ -32,6 +32,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
+                context.SaveChanges();
             }
         }
 
@@ -41,6 +42,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var updatedEntity = context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;
+                context.SaveChanges();
             }
         }
 
@@ -50,6 +52,23 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var deletedEntity = context.Entry(entity);
                 deletedEntity.State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+        }
+
+        public List<Car> GetCarsByBrandId(Expression<Func<Car, bool>> filter)
+        {
+            using (ReCapProjectContext context = new ReCapProjectContext())
+            {
+                return context.Set<Car>().Where(filter).ToList();
+            }
+        }
+
+        public List<Car> GetCarsByColorId(Expression<Func<Car, bool>> filter)
+        {
+            using (ReCapProjectContext context = new ReCapProjectContext() )
+            {
+                return context.Set<Car>().Where(filter).ToList();
             }
         }
     }

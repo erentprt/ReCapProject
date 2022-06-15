@@ -62,5 +62,15 @@ namespace DataAccess.Concrete.InMemory
             Car carById = _cars.SingleOrDefault(c => c.Id == id);
             return carById;
         }
+
+        public List<Car> GetCarsByBrandId(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetCarsByColorId(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
