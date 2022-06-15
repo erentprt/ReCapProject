@@ -1,0 +1,10 @@
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\bin\Debug\netstandard2.1\Core.deps.json
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\bin\Debug\netstandard2.1\Core.dll
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\bin\Debug\netstandard2.1\Core.pdb
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\obj\Debug\netstandard2.1\Core.csproj.AssemblyReference.cache
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\obj\Debug\netstandard2.1\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\obj\Debug\netstandard2.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\obj\Debug\netstandard2.1\Core.dll
+C:\Users\lenovo\RiderProjects\ReCapProject\Core\obj\Debug\netstandard2.1\Core.pdb
