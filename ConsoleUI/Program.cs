@@ -10,9 +10,20 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            Car();
+            //Car();
             //Brand();
             //Color();
+
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            rentalManager.Add(new Rental
+            {
+                CarId = 1,
+                CustomerId = 2,
+                RentDate = DateTime.Today,
+                ReturnDate = null
+            });
+
+
         }
 
         private static void Color()
