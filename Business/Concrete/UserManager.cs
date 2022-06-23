@@ -26,6 +26,12 @@ namespace Business.Concrete
             throw new System.NotImplementedException();
         }
 
+        public IDataResult<User> GetUserById(int id)
+        {
+            return new SuccessDataResult<User>(_userDal.Get(u=>u.Id==id));
+        }
+
+
         public IResult Add(User user)
         {
             _userDal.Add(user);

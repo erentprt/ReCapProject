@@ -9,6 +9,7 @@ namespace Business.Abstract
     {
         IDataResult<List<User>> GetAll();
         IDataResult<List<CarDetailDto>> GetUserDetails();
+        IDataResult<User> GetUserById(int id);
         IResult Add(User user);
         IResult Update(User user);
         IResult Delete(User user);
