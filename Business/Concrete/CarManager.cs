@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -21,13 +23,13 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetAll()
         {
-            return new DataResult<List<Car>>(_carDal.GetAll(),true,"Ürünler listelendi");
+            return new DataResult<List<Car>>(_carDal.GetAll(), true, "Ürünler listelendi");
         }
 
         public IDataResult<Car> GetCarById(int id)
         {
             return new SuccessDataResult<Car>(_carDal.Get(c => c.Id == id));
-        } 
+        }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
@@ -41,30 +43,19 @@ namespace Business.Concrete
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            if (DateTime.Now.Hour == 22)
-            {
-                return new ErrorDataResult<List<CarDetailDto>>("sistem bakımda");
-            }
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
         }
-
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-            if ((car.Description.Length >= 2) && (car.DailyPrice > 0))
-            {
-                _carDal.Add(car);
-                return new SuccessResult(Messages.CarAdded);
-            }
-            else
-            {
-                return new ErrorResult(Messages.CarInvalidName);
-            }
+            _carDal.Add(car);
+            return new SuccessResult(Messages.CarAdded);
         }
 
         public IResult Update(Car car)
         {
-             _carDal.Update(car);
-             return new SuccessResult(Messages.CarUpdated);
+            _carDal.Update(car);
+            return new SuccessResult(Messages.CarUpdated);
         }
 
         public IResult Delete(Car car)

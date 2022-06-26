@@ -53,6 +53,20 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Autofac.Extras.DynamicProxy": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.5.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -115,6 +129,26 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Autofac.Extras.DynamicProxy": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.5.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.2, )"
@@ -334,6 +368,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
